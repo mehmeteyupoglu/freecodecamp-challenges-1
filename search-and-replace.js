@@ -20,8 +20,8 @@ console.log(/[A-Z]/.test( before[0]));
     } return str.replace(before, after) 
   }
   
-console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"))
-console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
-console.log(myReplace("This has a spellngi error", "spellngi", "spelling")) // "This has a spelling error".
-myReplace("His name is Tom", "Tom", "john") //"His name is John".
-myReplace("Let us get back to more Coding", "Coding", "algorithms") // "Let us get back to more Algorithms".
+  console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"))
+  console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+  console.log(myReplace("This has a spellngi error", "spellngi", "spelling")) // "This has a spelling error".
+  myReplace("His name is Tom", "Tom", "john") //"His name is John".
+  myReplace("Let us get back to more Coding", "Coding", "algorithms") // "Let us get back to more Algorithms".

@@ -43,3 +43,4 @@ function convertToRoman(num) {
 //   convertToRoman(2014) //should return "MMXIV"
   console.log(convertToRoman(3999)) //should return "MMMCMXCIX"
 
+let separator = num => Array.from(num.toString()).reverse().map((d, i) => d * 10 ** i).reverse()

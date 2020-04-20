@@ -15,7 +15,7 @@ function palindrome(str) {
     
     let rvs = "", i = 0;  
   
-    for (i = newStr.length; i >= 0; --i){
+    for (i = newStr.length-1; i >= 0; --i){
       rvs += newStr[i]; 
     }
     console.log(`Rvs is ${rvs}`)

@@ -20,15 +20,13 @@ function sumFibs(num) {
         b = fib; 
         fib = a+b; 
     }
-    
+
     for(let i = 0; i<fibArr.length; i++) {
-        if(fibArr[i] % 2 !== 0) {
-            result += fibArr[i]
-        }
+        !(fibArr[i] % 2 == 0) ? (result += fibArr[i]) : null;
     }
     console.log(result)
     return result; 
-  }
+}
   
 //   console.log(sumFibs(4));
 

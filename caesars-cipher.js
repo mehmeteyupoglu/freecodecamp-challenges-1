@@ -8,15 +8,30 @@
 // All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 
 
-
-
 function rot13(str) {
+    
+    
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz', newStr = str.toLowerCase(), i = 0; 
+    let result = ''
 
-    return str;
+    for (i = 0; i < str.length; ++i){
+        let index  = alphabet.indexOf(newStr[i]) - 13
+        let minusIndex = 26 + index
+        if(index === -14){
+            result += newStr[i]
+        }
+        else if (index <= -1) {
+            result += alphabet[minusIndex]
+        }
+        else {
+            result += alphabet[index]
+        }
+
+    }
+    return result.toUpperCase() 
   }
-  
 
-// rot13("SERR PBQR PNZC") //should decode to FREE CODE CAMP
-// rot13("SERR CVMMN!") //should decode to FREE PIZZA!
-// rot13("SERR YBIR?") //should decode to FREE LOVE?
-// rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") //should decode to THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+console.log(rot13("SERR PBQR PNZC"))//should decode to FREE CODE CAMP
+console.log(rot13("SERR CVMMN!")) //should decode to FREE PIZZA!
+rot13("SERR YBIR?") //should decode to FREE LOVE?
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") //should decode to THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
